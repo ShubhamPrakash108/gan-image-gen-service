@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAN Image Studio</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <div class="ambient-glow"></div>
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">GAN</div>
+        <div class="brand-text">
+          <div class="brand-title">Image Studio</div>
+          <div class="brand-subtitle">Generate synthetic visuals in seconds</div>
+        </div>
+      </div>
+      <div class="status-pill" id="status-pill">Ready</div>
+    </header>
+
+    <main class="layout">
+      <section class="panel hero-panel">
+        <div class="hero-copy">
+          <h1>Build a fresh image set with an animated production vibe.</h1>
+          <p>
+            Set how many images you want, start the job, and watch the count
+            glow in seven colors while the model renders your batch.
+          </p>
+        </div>
+
+        <form id="generator-form" class="generator-form">
+          <label class="field">
+            <span>Number of images</span>
+            <input
+              id="num-images"
+              type="number"
+              min="1"
+              max="5"
+              step="1"
+              value="6"
+            />
+          </label>
+          <input id="num-range" type="range" min="1" max="5" value="6" />
+          <button id="generate-btn" type="submit">Generate</button>
+        </form>
+
+        <div class="status-card">
+          <div class="status-row">
+            <div class="status-title">Job Status</div>
+            <div class="status-id" id="job-id">No active job</div>
+          </div>
+          <div class="status-message" id="status-text">
+            Choose a number and press generate.
+          </div>
+          <div class="blink-line" id="blink-line" hidden>
+            Generating
+            <span id="image-count-blink" class="rainbow-blink">6</span>
+            images
+          </div>
+          <div class="progress-track">
+            <div class="progress-bar" id="progress-bar"></div>
+          </div>
+          <div class="error-text" id="error-text" hidden></div>
+        </div>
+      </section>
+
+      <section class="panel gallery-panel">
+        <div class="gallery-header">
+          <div>
+            <div class="gallery-title">Output</div>
+            <div class="gallery-subtitle">
+              Your generated images will appear here.
+            </div>
+          </div>
+          <div class="count-display">
+            <span class="count-label">Images</span>
+            <span class="count-value" id="num-display">6</span>
+          </div>
+        </div>
+        <div class="image-grid" id="image-grid"></div>
+      </section>
+    </main>
+  </body>
+</html>

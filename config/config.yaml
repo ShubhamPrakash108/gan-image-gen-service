@@ -1,0 +1,18 @@
+model_256_256_3:
+  model_path_256_256_3: ./model/generator_256_256_3.pth
+  number_of_images_256_256_3_to_generate: 1
+  LATENT_DIM_256_256_3: 512 # DON'T CHANGE THIS AT ANY COST
+  output_dir_256_256_3: ./output/256_256_3/
+  output_gif_dir_256_256_3: ./output/256_256_3_gif/generated_images_256_256_3.gif
+  number_of_frames_256_256_3_in_gif: 10
+  fps_of_gif_256_256_3: 2
+
+metadata_database:
+  supabase_table_name: generated_images_metadata
+
+rabbitmq_service:
+  image_generation_queue: image_generation_queue
+  gif_generation_queue: gif_generation_queue
+
+media_storage_service:
+  cloudinary_folder_name: generated_images
