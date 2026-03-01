@@ -2,7 +2,7 @@
   <img src="images/render_deployment.png" alt="GAN Image Studio — Live Demo" width="700"/>
 </p>
 
-<h1 align="center">🎨 Prod-GAN — Production-Grade GAN Image Generator</h1>
+<h1 align="center">🎨GAN Image Generator</h1>
 
 <p align="center">
   <b>Generate synthetic anime-style images on demand using a custom-trained GAN — backed by FastAPI, RabbitMQ workers, and a polished browser UI.</b>
