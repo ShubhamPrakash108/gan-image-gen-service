@@ -76,6 +76,12 @@
 
 ## 📸 Screenshots
 
+### 🖼️ Deployed Application — Live UI
+
+<p align="center">
+  <img src="images/deployed.jpg" alt="GAN Image Studio — Deployed UI" width="700"/>
+</p>
+
 ### 🚀 CI/CD Pipeline — GitHub Actions → Azure VM
 
 <p align="center">
